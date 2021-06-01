@@ -1,8 +1,23 @@
-body {
-  @include media(">=320px") {
-    background: #9f0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
   }
-  @include media(">=768px") {
-    background: tan;
+}
+.intro {
+  .img-holder {
+    height: 890px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+    }
   }
 }
