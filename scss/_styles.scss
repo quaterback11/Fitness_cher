@@ -1,0 +1,8 @@
+body {
+  @include media(">=320px") {
+    background: #9f0;
+  }
+  @include media(">=768px") {
+    background: tan;
+  }
+}
