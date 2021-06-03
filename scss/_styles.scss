@@ -133,18 +133,46 @@ body {
 .data-news {
   background: #fff;
   display: flex;
+  flex-wrap: wrap;
   @include media(">=768px") {
+    flex-wrap: nowrap;
+  }
+  @include media(">=1180px") {
     width: 1180px;
     margin: auto;
   }
 }
 .dataContent {
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  span {
+    @include news(14px, "Montserrat" sans-serif, 400, #fd634e);
+    text-transform: uppercase;
+    padding-top: 55px;
+    padding-bottom: 13px;
+  }
+  h3 {
+    @include news(35px, "Open Sans" sans-serif, 300, #a2ca28);
+    text-transform: uppercase;
+    padding-bottom: 73px;
+  }
+  p {
+    @include news(14px, "Open Sans" sans-serif, 400, #656e74);
+    line-height: 27px;
+    padding: 0 46px;
+  }
+  a {
+    @include news(14px, "Open Sans" sans-serif, 400, #a2ca28);
+  }
 }
 .dataImg {
-  flex: 1;
   height: 394px;
   overflow: hidden;
+  @include media(">=768px") {
+    flex: 1;
+  }
   img {
     width: auto;
     display: block;
