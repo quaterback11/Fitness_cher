@@ -23,7 +23,7 @@ body {
   .img-holder {
     height: 890px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     img {
       display: block;
       width: 100%;
@@ -31,46 +31,13 @@ body {
   }
 }
 .header-inner {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
-  .logo {
-    padding: 44px 0 0 95px;
-    h1 {
-      text-transform: uppercase;
-      font-size: 24px;
-      font-weight: 600;
-      .green {
-        border-bottom: 3px solid $atlatis;
-      }
-    }
-  }
+  min-width: 1213px;
+  margin: auto;
   .nav {
-    display: flex;
-    width: 580px;
-    justify-content: space-between;
-    padding: 60px 66px 0 0;
-    a {
-      @include navLink(#fff, 13px, 600);
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-  }
-}
-.tagline {
-  position: relative;
-  bottom: -400px;
-  left: 40px;
-  .big {
-    display: block;
-    font-weight: 400;
-    font-size: 40px;
-    text-transform: uppercase;
-    &:after {
-      content: "/";
-      color: $atlatis;
-    }
-  }
-  .small {
   }
 }
