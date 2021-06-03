@@ -21,7 +21,6 @@ body {
 }
 .intro {
   .img-holder {
-    height: 890px;
     overflow: hidden;
     position: relative;
     img {
@@ -34,10 +33,120 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
   min-width: 1213px;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 42px;
+  .logo {
+    margin-left: 93px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    span {
+      border-bottom: 3px solid $atlantis;
+    }
+  }
   .nav {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      margin-left: 65px;
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        &:hover {
+          color: $atlantis;
+        }
+      }
+    }
+  }
+}
+.tagline {
+  position: absolute;
+  left: 0;
+  top: 600px;
+  h1 {
+    padding-left: 117px;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 14px;
+    &::after {
+      content: "/";
+      color: $atlantis;
+    }
+  }
+  span {
+    padding-left: 276px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 8px;
+    &::after {
+      content: "/";
+      color: $persimmon;
+    }
+  }
+}
+.green-section {
+  background: $atlantis;
+  width: 100%;
+  height: 1257px;
+  .data-section {
+    width: 1180px;
+    margin: auto;
+    padding-top: 176px;
+    display: flex;
+    justify-content: space-between;
+    .articles {
+      width: 280px;
+      position: relative;
+      margin-bottom: 120px;
+
+      h2 {
+        font-size: 24px;
+        padding-bottom: 30px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        padding-bottom: 30px;
+      }
+      a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        &:hover {
+          color: $persimmon;
+        }
+      }
+    }
+  }
+}
+.data-news {
+  background: #fff;
+  display: flex;
+  @include media(">=768px") {
+    width: 1180px;
+    margin: auto;
+  }
+}
+.dataContent {
+  width: 400px;
+}
+.dataImg {
+  flex: 1;
+  height: 394px;
+  overflow: hidden;
+  img {
+    width: auto;
+    display: block;
   }
 }
