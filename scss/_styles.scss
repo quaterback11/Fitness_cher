@@ -185,7 +185,7 @@ body {
   }
 }
 .dataImg {
-  height: 394px;
+  // height: 394px;
   overflow: hidden;
   @include media(">=768px") {
     flex: 1;
@@ -208,11 +208,14 @@ body {
       flex-direction: column;
       .dataImg {
         flex: none;
+        height: auto;
       }
       .column-text-left {
         background: #fff;
         display: flex;
         align-items: flex-start;
+        height: 310px;
+        width: auto;
         span,
         h3 {
           padding-left: 35px;
@@ -224,13 +227,30 @@ body {
       flex-direction: column;
       .dataImg {
         flex: none;
-        height: auto;
+        height: 0;
       }
     }
   }
 }
 .greenBlock {
-  width: auto;
-  height: 310px;
   background: $atlantis;
+  height: 310px;
+  width: auto;
+  h3 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #ffff;
+    text-transform: uppercase;
+    padding: 60px 0 30px 60px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #fff;
+    padding: 0px 100px 0 60px;
+  }
+}
+.wide {
+  width: auto;
 }
