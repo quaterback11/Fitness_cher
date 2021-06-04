@@ -39,19 +39,21 @@ body {
   justify-content: space-between;
   margin-top: 42px;
   .logo {
-    margin-left: 93px;
+    margin-left: 97px;
+    margin-top: 3px;
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 700;
+    letter-spacing: 2px;
     position: relative;
     &::before {
       position: absolute;
       content: "";
       background: url(../images/sprite/sprite.svg#drop) no-repeat;
       width: 44px;
-      height: 41px;
-      top: -2px;
-      left: -40px;
+      height: 44px;
+      top: -4px;
+      left: -46px;
     }
     span {
       border-bottom: 3px solid $atlantis;
@@ -61,9 +63,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-right: 40px;
+    margin-right: 42px;
     li {
-      margin-left: 65px;
+      margin-left: 72px;
       a {
         text-transform: uppercase;
         text-decoration: none;
@@ -79,7 +81,7 @@ body {
 .tagline {
   position: absolute;
   left: 0;
-  bottom: 100px;
+  bottom: 145px;
   h1 {
     padding-left: 117px;
     text-transform: uppercase;
@@ -92,7 +94,7 @@ body {
     }
   }
   span {
-    padding-left: 276px;
+    padding-left: 280px;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
@@ -139,7 +141,7 @@ body {
 
     .articles {
       position: relative;
-      margin-bottom: 120px;
+      margin-bottom: 100px;
       width: 45%;
       @include media(">=768px") {
         width: 280px;
@@ -156,7 +158,7 @@ body {
       }
       a {
         position: absolute;
-        bottom: 0;
+        bottom: 19px;
         left: 0;
         text-decoration: none;
         font-size: 14px;
@@ -191,6 +193,7 @@ body {
     text-transform: uppercase;
     padding-top: 55px;
     padding-bottom: 13px;
+    word-spacing: 8px;
   }
   h3 {
     @include news(35px, "Open Sans" sans-serif, 300, #a2ca28);
@@ -199,8 +202,9 @@ body {
   }
   p {
     @include news(14px, "Open Sans" sans-serif, 400, #656e74);
-    line-height: 27px;
+    line-height: 25px;
     padding: 0 46px;
+    text-align: center;
   }
   a {
     @include news(14px, "Open Sans" sans-serif, 400, #a2ca28);
@@ -246,6 +250,12 @@ body {
         h3 {
           padding-left: 35px;
         }
+        h3 {
+          padding-bottom: 40px;
+        }
+        p {
+          text-align: left;
+        }
       }
     }
     .columh-right {
@@ -284,7 +294,7 @@ body {
     font-weight: 300;
     color: #ffff;
     text-transform: uppercase;
-    padding: 60px 0 30px 60px;
+    padding: 70px 0 30px 60px;
   }
   p {
     font-size: 13px;
@@ -301,26 +311,126 @@ body {
 h2::before {
   position: absolute;
   content: "";
-  top: -55px;
-  left: 3px;
+  top: -63px;
+  left: 2px;
 }
 .resources::before {
   background: url(../images/sprite/sprite.svg#resources) no-repeat;
-  width: 44px;
-  height: 41px;
+  width: 45px;
+  height: 45px;
 }
 .training::before {
   background: url(../images/sprite/sprite.svg#training) no-repeat;
-  width: 44px;
-  height: 41px;
+  width: 45px;
+  height: 45px;
 }
 .connect::before {
   background: url(../images/sprite/sprite.svg#connect) no-repeat;
-  width: 44px;
-  height: 41px;
+  width: 45px;
+  height: 45px;
 }
 .communicate::before {
   background: url(../images/sprite/sprite.svg#communicate) no-repeat;
-  width: 44px;
-  height: 41px;
+  width: 45px;
+  height: 45px;
+}
+.fitness-first {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 44px;
+    left: 96px;
+    background: url(../images/sprite/sprite.svg#drop-white) no-repeat;
+    width: 44px;
+    height: 24px;
+  }
+}
+.active-users {
+  position: relative;
+  span {
+    position: absolute;
+    bottom: 48px;
+    right: 75px;
+    color: #c74f3e;
+    &::after {
+      position: absolute;
+      content: "";
+      background: url(../images/sprite/sprite.svg#drop) no-repeat;
+      width: 30px;
+      height: 30px;
+      bottom: -4px;
+      right: -42px;
+    }
+  }
+}
+.left-side-drop {
+  span {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    &::after {
+      position: absolute;
+      content: "";
+      background: url(../images/sprite/sprite.svg#drop) no-repeat;
+      width: 30px;
+      height: 30px;
+      bottom: -5px;
+      left: 124px;
+    }
+  }
+}
+.human-ico {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -33px;
+    right: -190px;
+    background: url(../images/sprite/sprite.svg#human) no-repeat;
+    width: 44px;
+    height: 41px;
+  }
+}
+.strawberry-ico {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -36px;
+    right: -256px;
+    background: url(../images/sprite/sprite.svg#strawberry) no-repeat;
+    width: 44px;
+    height: 41px;
+  }
+}
+.avocado-ico {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    right: 22px;
+    background: url(../images/sprite/sprite.svg#avocado) no-repeat;
+    width: 44px;
+    height: 41px;
+  }
+}
+.small-part {
+  span {
+    font-family: "Montserrat" sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-left: 38px;
+    display: block;
+  }
+  h3 {
+    padding: 15px 0 40px 37px;
+    letter-spacing: -2.9px;
+  }
+  p {
+    padding: 0 47px 70px 40px;
+  }
 }
