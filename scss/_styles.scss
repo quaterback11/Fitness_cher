@@ -35,6 +35,7 @@ body {
   left: 0;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 42px;
   .logo {
@@ -42,12 +43,23 @@ body {
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 700;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(../images/sprite/sprite.svg#drop) no-repeat;
+      width: 44px;
+      height: 41px;
+      top: -2px;
+      left: -40px;
+    }
     span {
       border-bottom: 3px solid $atlantis;
     }
   }
   .nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     margin-right: 40px;
     li {
@@ -67,7 +79,7 @@ body {
 .tagline {
   position: absolute;
   left: 0;
-  top: 600px;
+  bottom: 100px;
   h1 {
     padding-left: 117px;
     text-transform: uppercase;
@@ -121,6 +133,7 @@ body {
     flex-wrap: wrap;
     @include media(">=768px") {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
 
@@ -170,6 +183,7 @@ body {
 .dataContent {
   width: 400px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   span {
@@ -211,8 +225,11 @@ body {
     max-width: 1180px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
+
     .column-left {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
       .dataImg {
         flex: none;
@@ -221,6 +238,7 @@ body {
       .column-text-left {
         background: #fff;
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         height: 310px;
         width: auto;
@@ -232,12 +250,29 @@ body {
     }
     .columh-right {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
       .dataImg {
         flex: none;
         height: 0;
       }
     }
+  }
+}
+.data-section-brown {
+  &.reverse {
+    .column-left {
+      width: 66%;
+    }
+    .column-right {
+      width: 34%;
+    }
+  }
+  .column-left {
+    width: 34%;
+  }
+  .column-right {
+    width: 66%;
   }
 }
 .greenBlock {
@@ -266,25 +301,25 @@ body {
 h2::before {
   position: absolute;
   content: "";
-  top: 0px;
-  left: 0px;
+  top: -55px;
+  left: 3px;
 }
-.resources {
+.resources::before {
   background: url(../images/sprite/sprite.svg#resources) no-repeat;
   width: 44px;
   height: 41px;
 }
-.training {
+.training::before {
   background: url(../images/sprite/sprite.svg#training) no-repeat;
   width: 44px;
   height: 41px;
 }
-.connect {
+.connect::before {
   background: url(../images/sprite/sprite.svg#connect) no-repeat;
   width: 44px;
   height: 41px;
 }
-.communicate {
+.communicate::before {
   background: url(../images/sprite/sprite.svg#communicate) no-repeat;
   width: 44px;
   height: 41px;
