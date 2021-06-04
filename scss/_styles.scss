@@ -33,8 +33,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 1213px;
-  margin: auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 42px;
@@ -50,6 +49,7 @@ body {
   .nav {
     display: flex;
     justify-content: flex-end;
+    margin-right: 40px;
     li {
       margin-left: 65px;
       a {
@@ -114,15 +114,23 @@ body {
     }
   }
   .data-section {
-    width: 1180px;
+    max-width: 1180px;
     margin: auto;
     padding-top: 176px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    @include media(">=768px") {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .articles {
-      width: 280px;
       position: relative;
       margin-bottom: 120px;
+      width: 45%;
+      @include media(">=768px") {
+        width: 280px;
+      }
 
       h2 {
         font-size: 24px;
@@ -200,7 +208,7 @@ body {
   width: 100%;
   background: $persimmon;
   .data-section-brown {
-    width: 1180px;
+    max-width: 1180px;
     margin: auto;
     display: flex;
     .column-left {
@@ -253,4 +261,31 @@ body {
 }
 .wide {
   width: auto;
+}
+
+h2::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+}
+.resources {
+  background: url(../images/sprite/sprite.svg#resources) no-repeat;
+  width: 44px;
+  height: 41px;
+}
+.training {
+  background: url(../images/sprite/sprite.svg#training) no-repeat;
+  width: 44px;
+  height: 41px;
+}
+.connect {
+  background: url(../images/sprite/sprite.svg#connect) no-repeat;
+  width: 44px;
+  height: 41px;
+}
+.communicate {
+  background: url(../images/sprite/sprite.svg#communicate) no-repeat;
+  width: 44px;
+  height: 41px;
 }
